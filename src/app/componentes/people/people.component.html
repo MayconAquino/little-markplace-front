@@ -1,2 +1,28 @@
-<p>
-deu certo essa caceta</p>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Product</title>
+</head>
+<body>
+    <form action="/submit-form" method="POST">
+        <h1>Formulário de Contato</h1>
+
+        <div class="form-dados">
+          <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+
+          <div>
+            <label for="sobreNome">Sobrenome:</label>
+            <input type="text" id="sobreNome" name="sobreNome" class="form-control" required>
+          </div>
+        </div>
+        <div class="botao-salvar">
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</body>
+</html>
