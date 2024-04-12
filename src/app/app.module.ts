@@ -19,9 +19,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    AppRoutingModule
+
+
   ],
   providers: [
     provideAnimationsAsync()
