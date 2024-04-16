@@ -14,10 +14,10 @@ import { Router } from '@angular/router';
 export class PeopleComponent {
   private apiUrl = 'http://localhost:8080/api/persons';
   person = {
-    nome: '',
+    name: '',
     cpf: '',
-    endereco: '',
-    cargo: ''
+    address: '',
+    office: ''
   };
 
 
