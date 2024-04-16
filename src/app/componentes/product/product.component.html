@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+<div class="container">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 </head>
 <body>
     <form action="/submit-form" method="POST">
-        <h1>Formulário de Contato</h1>
+        <h1>Cadastro de Produto</h1>
 
         <div class="form-dados">
           <div>
@@ -21,7 +22,10 @@
           </div>
         </div>
         <div class="botao-salvar">
-          <button type="button" class="btn btn-primary">Salvar</button>
-        </div>    </form>
+          <button mat-flat-button color="primary">Salvar</button>
+          <button mat-flat-button color="primary" (click)="callBack()">Voltar</button>
+        </div>
+       </form>
 </body>
+</div>
 </html>

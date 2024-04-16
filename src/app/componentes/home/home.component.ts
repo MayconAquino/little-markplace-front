@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [MatButtonModule]
 })
 export class HomeComponent implements OnInit {
 
@@ -14,8 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   callProduct(): void {
-    console.log("Chegou aqui")
-
     this.router.navigate(['/product']);
   }
 

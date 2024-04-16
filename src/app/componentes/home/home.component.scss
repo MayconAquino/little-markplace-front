@@ -1,5 +1,5 @@
-.header {
-margin: 15px;
+.container {
+  margin: 20px;
 }
 
 .footer {
@@ -7,7 +7,7 @@ margin: 15px;
   position: fixed
 }
 
-.btn-primary {
+.botton-product {
   height: 40px;
   width: 200px;
   margin-bottom: 10px;
@@ -17,4 +17,8 @@ margin: 15px;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+}
+
+.container mat-divider {
+  margin: 0;
 }

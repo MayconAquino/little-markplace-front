@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Product</title>
+    <title>Cadastro de Pessoa</title>
 </head>
 <body>
-    <form action="/submit-form" method="POST">
-        <h1>Formulário de Contato</h1>
-
-        <div class="form-dados">
-          <div>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-          </div>
-
-          <div>
-            <label for="sobreNome">Sobrenome:</label>
-            <input type="text" id="sobreNome" name="sobreNome" class="form-control" required>
-          </div>
-        </div>
-        <div class="botao-salvar">
-          <button type="button" class="btn btn-primary">Salvar</button>
-        </div>
-    </form>
+    <div class="container">
+        <form #personForm="ngForm" (ngSubmit)="submitPerson()">
+            <h1>Cadastro de pessoa:</h1>
+            <div class="form-dados">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" [(ngModel)]="person.nome" class="form-control" required title="Digite o nome da pessoa">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" [(ngModel)]="person.cpf" class="form-control" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="Digite o CPF no formato: 000.000.000-00">
+                </div>
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" [(ngModel)]="person.endereco" class="form-control" required title="Digite o endereço">
+                </div>
+                <div>
+                    <label for="cargo">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo" [(ngModel)]="person.cargo" class="form-control" required title="Digite o cargo">
+                </div>
+            </div>
+            <div class="botao-salvar">
+                <button type="submit" mat-flat-button color="primary">Salvar</button>
+                <button type="button" mat-flat-button color="primary" (click)="callBack()">Voltar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
